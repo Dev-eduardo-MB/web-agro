@@ -1,0 +1,762 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    max-width: 100vw;
+}
+
+/* variaveis--------------------------------------------------------------------------------------------------------------------------*/
+
+:root {
+    --color-title1: linear-gradient(94deg, rgb(34, 149, 107) 4.57%, #CECE35 97.25%);
+    --color-title2: linear-gradient(94deg, #CECE35 4.57%, #22956B 97.25%);
+    --color-btn: linear-gradient(92deg, #22956B 2.27%, #CECE35 121.59%);
+    --color-subcapa-link-scroll: #3777A5;
+    --color-slidercard-btncard: #3777A5;
+}
+
+/*variaveis fechamento----------------------------------------------------------------------------------------------------------------*/
+/*config gerais-----------------------------------------------------------------------------------------------------------------------*/
+
+html {
+    max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-subcapa-link-scroll);
+}
+
+/*config gerais fechamento------------------------------------------------------------------------------------------------------------*/
+/*menu--------------------------------------------------------------------------------------------------------------------------------*/
+
+header {
+    opacity: 0.95;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    background-color: #24252a;
+    box-shadow: 0px 3px 10px #464646;
+   
+}
+
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 8rem;
+    width: 25rem;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.icon {
+    width: 40px;
+    height: 20px;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border-bottom: #878787 solid .2rem;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    font-weight: 300;
+    padding: .2rem;
+    transition: .3s;
+    letter-spacing: .1rem;
+}
+
+.nav-link:hover {
+    border-bottom: white solid .2rem;
+    transition: 150ms;
+}
+
+.icon-baixado-abrir {
+    width: 3.5rem;
+    opacity: 0.8;
+    transition: 150ms;
+}
+
+.icon-baixado-abrir:hover {
+    transition: 150ms;
+    transform: scale(1.1);
+}
+
+.icon-baixado-abrir:focus {
+    transition: 150ms;
+    transform: scale(1.1);
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.material-symbols-outlined {
+    color: #FFF;
+}
+
+/*menu fechamento---------------------------------------------------------------------------------------------------------------------*/
+/*capa--------------------------------------------------------------------------------------------------------------------------------*/
+
+.capa-inicial {
+    background-image: url("image/Capa (5).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    box-shadow: 1rem 10rem 10rem rgba(34, 149, 107, 0.3);
+    width: 100vw;
+    height: 100vh;
+}
+
+.capa-inicial {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.container-capa {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+}
+
+.titulo-capa {
+
+    font-family: 'Abel', sans-serif;
+    background-image: var(--color-title1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 8rem 0 0 5rem;
+    font-size: min(10.8vw, 9rem);
+    font-weight: 400;
+    line-height: 12rem;
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+    width: min-content;
+}
+
+.subtitulo-capa {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0 0 0 5rem;
+    color: var(--color-subcapa-link-scroll);
+    font-size: min(5vw, 3.5rem);
+    letter-spacing: 0.4rem;
+}
+
+.projeto-capa {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: var(--color-subcapa-link-scroll);
+    font-size: min(5vw, 1.2rem);
+    font-weight: 400;
+    margin: 2rem 0 0 5rem;
+    letter-spacing: 0.4rem;
+}
+
+.abbr-capa {
+    font-size: min(5vw, 1.2rem);
+}
+
+.btn-container-capa {
+    margin-left: min(5vw, 13rem);
+    margin-top: 5rem;
+   
+}
+
+.btn-capa {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10rem;
+    text-align: center;
+    padding: min(6vw, 1.6rem);
+    font-family: 'Roboto', sans-serif;
+    background: var(--color-btn);
+    color: #FFF;
+    font-size: min(5vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    transition: .4s;
+}
+
+.btn-capa:hover {
+ 
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+.btn-capa:focus {
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+/*capa fechamento---------------------------------------------------------------------------------------------------------------------*/
+/*conteudo----------------------------------------------------------------------------------------------------------------------------*/
+/*main pagina------------------------------------------------------------------------------------------------------------------------*/
+
+.main-paginaa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.paragrafo1-legislacao {
+    padding: 1rem;
+    background-size: cover;
+    background-position: left;
+
+}
+
+.aa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*main pagina fechamento--------------------------------------------------------------------------------------------------------------*/
+/* titulos----------------------------------------------------------------------------------------------------------------------------*/
+
+.containers-h1 {
+    margin-bottom: 3rem;
+}
+
+.containers-h2 {
+    margin-bottom: 3rem;
+}
+
+.titulo-h1 {
+    font-family: 'Abel', sans-serif;
+    background-image: var(--color-title1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: min(6.3vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.9rem;
+    text-transform: uppercase;
+    margin: 15rem 0 1rem 0;
+    border-bottom: #22956B .3rem solid;
+}
+
+.titulo-h2 {
+    font-family: 'Abel', sans-serif;
+    background-image: var(--color-title2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: min(6vw, 4rem);
+    font-weight: 400;
+    letter-spacing: 0.9rem;
+    text-transform: uppercase;
+    margin: 9rem 0 1rem 0;
+    border-bottom: #CECE35 .3rem solid;
+}
+
+/*titulos fechamento------------------------------------------------------------------------------------------------------------------*/
+/*paragrafos--------------------------------------------------------------------------------------------------------------------------*/
+.ol-list {
+    margin: 1.2rem 15%;
+
+}
+
+
+.ol-list li {
+    list-style-type: none;
+    list-style-position: inside;
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+}
+
+.ol-fraudes li{
+    list-style-type:upper-roman;
+    font-size:min(3.5rem,1.8rem);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+    
+}
+
+
+.paragrafo1-introducao {
+    text-align: center;
+    opacity: .7;
+    
+}
+
+
+.paragrafo1-legislacao {
+
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+}
+
+.paragrafo {
+    margin: 2rem 15%;
+}
+
+.paragrafo,
+abbr,
+b {
+    font-size:min(3.5rem,1.8rem);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+}
+
+
+
+
+.links-conteudos-paragrafos {
+    text-decoration: none;
+    color: var(--color-subcapa-link-scroll);
+}
+
+/*paragrafos fechamento---------------------------------------------------------------------------------------------------------------*/
+/* video------------------------------------------------------------------------------------------------------------------------------*/
+
+.container-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.video-h3 {
+    font-family: 'Abel', sans-serif;
+    color: #22956B;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    margin: 5rem 0 1rem 0;
+    text-align: center;
+    border-bottom: #22956B .2rem solid;
+}
+
+.video {
+    width: 50%;
+    border-radius: 2rem;
+}
+
+.direitos-autorais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+/*video fechamento--------------------------------------------------------------------------------------------------------------------*/
+/*Cards-------------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: var(--color-slidercard-btncard);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+    background: #404040;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -25px;
+}
+
+.slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 325px;
+    object-fit: cover;
+}
+
+.card {
+    background-image: url("image/campo-agricola-meio-verde-grama-meio-amarelo-bonito-tiro-com-um-zangao.jpg");
+    background-size: cover;
+    background-position: right;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    opacity: .99;
+    margin-bottom: .7rem;
+    box-shadow: 4px 3px 6px 1px rgba(36, 37, 42, .5);
+    margin: 2rem 1rem;
+    transition: 300ms;
+}
+
+.card p {
+    height: 50%;
+    color: #ffffff;
+    user-select: none;
+    text-align: center;
+    margin: 0 1rem;
+    font-family: 'Abel', sans-serif;
+    font-size: 2.5rem;
+
+
+    border-radius: .5rem;
+    text-shadow: rgba(36, 37, 42, .9) 1.5px 1.5px;
+}
+
+.card:hover {
+    transition: 300ms;
+    transform: scale(1.05);
+
+}
+
+.card h2 {
+    color: #ffff;
+    text-shadow: rgba(36, 37, 42, .9) 1.5px 1.5px;
+    user-select: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem 1rem;
+    font-family: 'Abel', sans-serif;
+    font-size: 3.8rem;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    transition: 150ms;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 6px;
+    transition: 150ms;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: var(--color-slidercard-btncard);
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/*Cards Fechamento -------------------------------------------------------------------------------------------------------------------*/
+/*spam denuncia-----------------------------------------------------------------------------------------------------------------------*/
+
+.container-span {
+    margin-top: 5rem;
+}
+
+.span-denuncia {
+    user-select: none;
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*spam denuncia fechamento------------------------------------------------------------------------------------------------------------*/
+/*conteudo fechamento-----------------------------------------------------------------------------------------------------------------*/
+/*footer-rodapé-----------------------------------------------------------------------------------------------------------------------*/
+
+.btn-container-footer {
+    margin: 4rem 0;
+}
+
+.footer {
+    background-color: #45b5ae;
+    display: flex;
+    justify-content: space-around;
+    user-select: none;
+}
+.ul-footer{
+    list-style-type: none;
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    line-height: 1.4rem;
+    text-decoration: none;
+    user-select: none;
+}
+.ul-footer li{
+    margin: 0.8rem 1rem 0.8rem 1rem;
+    user-select: none;
+}
+
+.p-footer {
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2rem;
+    line-height: 1.4rem;
+    text-decoration: none;
+    user-select: none;
+}
+
+.p-footer p {
+    margin: 2.5rem 1rem 3rem 1rem;
+    user-select: none;
+}
+.link-footer{
+    width: min-content;
+}
+.img-footer {
+    display: flex;
+    align-items: end;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+}
+
+.logo-footer {
+    height: 8rem;
+    width: 25rem;
+}
+
+/*footer-rodapé fechamento-------------------------------------------------------------------------------------------------*/
+/* media para responsividade-Styles for mobile and tablets----------------------------------------------------------------*/
+
+@media only screen and (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+        display: none !important;
+    }
+
+    .slider-wrapper .image-list {
+        gap: 10px;
+        margin-bottom: 15px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .slider-wrapper .image-list .image-item {
+        width: 280px;
+        height: 325px;
+    }
+
+    .slider-scrollbar .scrollbar-thumb {
+        width: 20%;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+    .capa-inicial {
+        background-image: url("image/Capa (7).png");
+    }
+   
+}
+
+@media screen and (max-width: 800px) {
+   
+    .paragrafo{
+    
+        line-height: 2rem;
+       padding: 0;
+       margin-left: 4px;
+       margin-right: 4.2px;
+    }
+    .ol-list{
+        margin-left: 4px;
+        margin-right: 4.2px;  
+    }
+    
+    .ol-evitar,
+    .ol-list li,  
+    .ol-fraudes li,
+    .ol-fraudes li b{
+        line-height: 2rem;
+    }
+
+    .video {
+        width: 90%;
+    }
+
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .ul-container {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: center;
+        border-top: #FFF solid 2px;
+    }
+
+    .ul-container ul {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .titulo-h1 {
+        letter-spacing: .6rem;
+    }
+
+    .paragrafo {
+        letter-spacing: .1rem;
+    }
+
+  
+}
+
+/* media para responsividade-Styles for mobile and tablets fechamento----------------------------------------------------------------*/
+/*FIM DO CSS--------------------------------------------------------------------------------------------------------------*/
