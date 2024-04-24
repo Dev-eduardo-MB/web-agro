@@ -387,6 +387,7 @@ b {
 }
 
 .video {
+    height: 43rem;
     width: 50%;
     border-radius: 2rem;
 }
